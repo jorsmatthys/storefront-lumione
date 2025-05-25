@@ -30,3 +30,5 @@ config.codekit
 # Composer
 vendor
 /eslint_report.json
+storefront-lumione.zip
+languages/storefront.pot
