@@ -1,10 +1,11 @@
-# <!=Copyright (C) 2025 Automattic
+# <!=Copyright (C) 2025 Automattic & Jors Matthys
 # This file is distributed under the GNU General Public License v3 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: Storefront 4.6.1\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/storefront\n"
-"POT-Creation-Date: 2025-01-20 11:20:58+00:00\n"
+"Project-Id-Version: Storefront lumione 4.6.1\n"
+"Report-Msgid-Bugs-To: "
+"https://wordpress.org/support/theme/storefront-lumione\n"
+"POT-Creation-Date: 2025-05-25 21:22:57+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -870,11 +871,11 @@ msgid "Search Results for: %s"
 msgstr ""
 
 #. Theme Name of the plugin/theme
-msgid "Storefront"
+msgid "Storefront lumione"
 msgstr ""
 
-#. Theme URI of the plugin/theme
-msgid "https://woocommerce.com/products/storefront/"
+#. Author URI of the plugin/theme
+msgid "https://github.com/jorsmatthys/storefront-lumione"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -890,11 +891,7 @@ msgid ""
 msgstr ""
 
 #. Author of the plugin/theme
-msgid "Automattic"
-msgstr ""
-
-#. Author URI of the plugin/theme
-msgid "https://woocommerce.com/"
+msgid "Automattic & Jors Matthys"
 msgstr ""
 
 #. Template Name of the plugin/theme

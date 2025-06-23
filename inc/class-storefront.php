@@ -92,9 +92,9 @@ if ( ! class_exists( 'Storefront' ) ) :
 				apply_filters(
 					'storefront_register_nav_menus',
 					array(
-						'primary'   => __( 'Primary Menu', 'storefront' ),
-						'secondary' => __( 'Secondary Menu', 'storefront' ),
-						'handheld'  => __( 'Handheld Menu', 'storefront' ),
+						'primary'   => __( 'Primary Menu', 'storefront lumione' ),
+						'secondary' => __( 'Secondary Menu', 'storefront lumione' ),
+						'handheld'  => __( 'Handheld Menu', 'storefront lumione' ),
 					)
 				)
 			);
@@ -184,27 +184,27 @@ if ( ! class_exists( 'Storefront' ) ) :
 				'editor-font-sizes',
 				array(
 					array(
-						'name' => __( 'Small', 'storefront' ),
+						'name' => __( 'Small', 'storefront lumione' ),
 						'size' => 14,
 						'slug' => 'small',
 					),
 					array(
-						'name' => __( 'Normal', 'storefront' ),
+						'name' => __( 'Normal', 'storefront lumione' ),
 						'size' => 16,
 						'slug' => 'normal',
 					),
 					array(
-						'name' => __( 'Medium', 'storefront' ),
+						'name' => __( 'Medium', 'storefront lumione' ),
 						'size' => 23,
 						'slug' => 'medium',
 					),
 					array(
-						'name' => __( 'Large', 'storefront' ),
+						'name' => __( 'Large', 'storefront lumione' ),
 						'size' => 26,
 						'slug' => 'large',
 					),
 					array(
-						'name' => __( 'Huge', 'storefront' ),
+						'name' => __( 'Huge', 'storefront lumione' ),
 						'size' => 37,
 						'slug' => 'huge',
 					),
@@ -248,15 +248,15 @@ if ( ! class_exists( 'Storefront' ) ) :
 		 */
 		public function widgets_init() {
 			$sidebar_args['sidebar'] = array(
-				'name'        => __( 'Sidebar', 'storefront' ),
+				'name'        => __( 'Sidebar', 'storefront lumione' ),
 				'id'          => 'sidebar-1',
 				'description' => '',
 			);
 
 			$sidebar_args['header'] = array(
-				'name'        => __( 'Below Header', 'storefront' ),
+				'name'        => __( 'Below Header', 'storefront lumione' ),
 				'id'          => 'header-1',
-				'description' => __( 'Widgets added to this region will appear beneath the header and above the main content.', 'storefront' ),
+				'description' => __( 'Widgets added to this region will appear beneath the header and above the main content.', 'storefront lumione' ),
 			);
 
 			$rows    = intval( apply_filters( 'storefront_footer_widget_rows', 1 ) );
@@ -269,16 +269,16 @@ if ( ! class_exists( 'Storefront' ) ) :
 
 					if ( 1 === $rows ) {
 						/* translators: 1: column number */
-						$footer_region_name = sprintf( __( 'Footer Column %1$d', 'storefront' ), $region );
+						$footer_region_name = sprintf( __( 'Footer Column %1$d', 'storefront lumione' ), $region );
 
 						/* translators: 1: column number */
-						$footer_region_description = sprintf( __( 'Widgets added here will appear in column %1$d of the footer.', 'storefront' ), $region );
+						$footer_region_description = sprintf( __( 'Widgets added here will appear in column %1$d of the footer.', 'storefront lumione' ), $region );
 					} else {
 						/* translators: 1: row number, 2: column number */
-						$footer_region_name = sprintf( __( 'Footer Row %1$d - Column %2$d', 'storefront' ), $row, $region );
+						$footer_region_name = sprintf( __( 'Footer Row %1$d - Column %2$d', 'storefront lumione' ), $row, $region );
 
 						/* translators: 1: column number, 2: row number */
-						$footer_region_description = sprintf( __( 'Widgets added here will appear in column %1$d of footer row %2$d.', 'storefront' ), $region, $row );
+						$footer_region_description = sprintf( __( 'Widgets added here will appear in column %1$d of footer row %2$d.', 'storefront lumione' ), $region, $row );
 					}
 
 					$sidebar_args[ $footer ] = array(
@@ -352,8 +352,8 @@ if ( ! class_exists( 'Storefront' ) ) :
 
 			if ( has_nav_menu( 'handheld' ) ) {
 				$storefront_l10n = array(
-					'expand'   => __( 'Expand child menu', 'storefront' ),
-					'collapse' => __( 'Collapse child menu', 'storefront' ),
+					'expand'   => __( 'Expand child menu', 'storefront lumione' ),
+					'collapse' => __( 'Collapse child menu', 'storefront lumione' ),
 				);
 
 				wp_localize_script( 'storefront-navigation', 'storefrontScreenReaderText', $storefront_l10n );
@@ -487,7 +487,7 @@ if ( ! class_exists( 'Storefront' ) ) :
 		 * Custom navigation markup template hooked into `navigation_markup_template` filter hook.
 		 */
 		public function navigation_markup_template() {
-			$template  = '<nav id="post-navigation" class="navigation %1$s" role="navigation" aria-label="' . esc_html__( 'Post Navigation', 'storefront' ) . '">';
+			$template  = '<nav id="post-navigation" class="navigation %1$s" role="navigation" aria-label="' . esc_html__( 'Post Navigation', 'storefront lumione' ) . '">';
 			$template .= '<h2 class="screen-reader-text">%2$s</h2>';
 			$template .= '<div class="nav-links">%3$s</div>';
 			$template .= '</nav>';
