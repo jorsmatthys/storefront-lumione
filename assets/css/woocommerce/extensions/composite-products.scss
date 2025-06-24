@@ -252,10 +252,10 @@ table.shop_table_responsive tr.component_table_item {
 	font-size: ms(2);
 }
 
+// Customization: we believe that 1260 width should be very comfortable for pretty much any modern desktop or laptop screen. 
 .widget.widget_composite_summary.widget_position_fixed .widget_composite_summary_content {
-
 	@include clearfix;
-	max-width: 1064px;
+	max-width: 1260px;
 	margin-left: auto;
 	margin-right: auto;
 	padding: 0 ms(5);
