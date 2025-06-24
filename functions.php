@@ -66,6 +66,32 @@ if ( version_compare( get_bloginfo( 'version' ), '4.7.3', '>=' ) && ( is_admin()
 }
 
 /**
+ * This function should allow you to hide out-of-stock products by default on the shop and product category pages.
+ * It checks if the user has requested to show out-of-stock products via a query parameter.
+ * Default: Hide out-of-stock products
+ */ 
+function tnt_hide_out_of_stock_by_default( $query ) {
+    if ( is_admin() || ! $query->is_main_query() || ! is_shop() && ! is_product_category() ) {
+        return;
+    }
+
+    if ( isset($_GET['show_outofstock']) && $_GET['show_outofstock'] === 'yes' ) {
+        // Show all products
+        return;
+    }
+
+    // Otherwise, hide out-of-stock
+    $meta_query = (array) $query->get('meta_query');
+    $meta_query[] = array(
+        'key'     => '_stock_status',
+        'value'   => 'outofstock',
+        'compare' => 'NOT IN'
+    );
+    $query->set('meta_query', $meta_query);
+}
+add_action( 'pre_get_posts', 'tnt_hide_out_of_stock_by_default' );
+
+/**
  * Note: Do not add any custom code here. Please use a custom plugin so that your customizations aren't lost during updates.
  * https://github.com/woocommerce/theme-customisations
  */
