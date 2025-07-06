@@ -262,6 +262,10 @@ table.shop_table_responsive tr.component_table_item {
 	box-sizing: content-box;
 }
 
+// todo: refer to a new breakpoint for 1064 or ms(18) here if it turns out 
+// that this causes issues on smaller screens
+// in the past this was only meant to be loaded on screens narrower than 1064
+// idem for other similar occurences
 @include susy-media (max-width $container-width) {
 
 	.widget.widget_composite_summary.widget_position_fixed .widget_composite_summary_content {
